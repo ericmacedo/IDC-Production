@@ -1,5 +1,8 @@
 # Vis-Kt Vagrant Box with IDC repositories
 
+Clone this repository with:
+> ```git clone --recursive https://github.com/ericmacedo/IDC-Production.git```
+
 Base box: Ubuntu/Bionic64
 
 Dependencies:
