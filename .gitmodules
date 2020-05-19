@@ -1,0 +1,8 @@
+[submodule "IC3"]
+	path = IC3
+	url = git@github.com:ericmacedo/IDC.git
+	branch = IC3
+[submodule "IC5"]
+	path = IC5
+	url = git@github.com:ericmacedo/IDC.git
+	branch = IC5
