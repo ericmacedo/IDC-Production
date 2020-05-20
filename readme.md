@@ -3,9 +3,14 @@
 Clone this repository with:
 > ```git clone --recursive https://github.com/ericmacedo/IDC-Production.git```
 
-Base box: Ubuntu/Bionic64
+## Box specs
 
-Dependencies:
+* Distro: Ubuntu 18.04.4 LTS (Bionic Beaver)
+* Box size: 1.7G
+* RAM: 1GB
+* Storage: 10GB
+
+## Dependencies:
 
 * [Vagrant](https://www.vagrantup.com/)
 * [VirtualBox](https://www.virtualbox.org/)
