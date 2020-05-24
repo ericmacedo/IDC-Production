@@ -1,7 +1,16 @@
 # Vis-Kt Vagrant Box with IDC repositories
 
+## Dependencies:
+
+* [Git](https://git-scm.com/) 
+* [Vagrant](https://www.vagrantup.com/)
+* [VirtualBox](https://www.virtualbox.org/)
+
 Clone this repository with:
-> ```git clone --recursive https://github.com/ericmacedo/IDC-Production.git```
+
+> Linux: ```git clone --recursive https://github.com/ericmacedo/IDC-Production.git```
+
+> Windows: ```git.exe clone --recursive https://github.com/ericmacedo/IDC-Production.git```
 
 ## Box specs
 
@@ -9,11 +18,9 @@ Clone this repository with:
 * Box size: 1.7G
 * RAM: 1GB
 * Storage: 10GB
-
-## Dependencies:
-
-* [Vagrant](https://www.vagrantup.com/)
-* [VirtualBox](https://www.virtualbox.org/)
+* Authentication:
+    * User:     vagrant
+    * Password: vagrant
 
 ## Versions
 
