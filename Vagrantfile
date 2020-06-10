@@ -27,6 +27,8 @@ Vagrant.configure("2") do |config|
     vb.name = "Vis-Kt"
     vb.gui = false
     vb.customize ["modifyvm", :id, "--audio", "none"]
+    vb.customize ["modifyvm", :id, "--uart1", "0x3F8", "4"]
+    vb.customize ["modifyvm", :id, "--uartmode1", "file", File.join(Dir.pwd, "Vis-Kt.log")]
     vb.memory = "1024"
   end
 end
