@@ -1,26 +1,15 @@
-# Vis-Kt Vagrant Box with IDC repositories
+# Vis-Kt Docker container with IDC repositories
 
 ## Dependencies:
 
 * [Git](https://git-scm.com/) 
-* [Vagrant](https://www.vagrantup.com/)
-* [VirtualBox](https://www.virtualbox.org/)
+* [Docker](https://www.docker.com/)
 
 Clone this repository with:
 
 > Linux: ```git clone --recursive https://github.com/ericmacedo/IDC-Production.git```
 
 > Windows: ```git.exe clone --recursive https://github.com/ericmacedo/IDC-Production.git```
-
-## Box specs
-
-* Distro: Ubuntu 18.04.4 LTS (Bionic Beaver)
-* Box size: 1.7G
-* RAM: 1GB
-* Storage: 10GB
-* Authentication:
-    * User:     vagrant
-    * Password: vagrant
 
 ## Versions
 
@@ -36,22 +25,20 @@ Clone this repository with:
 ## Instructions 
 *All commands must be executed inside this repository's root folder*
 
-1) Power up:
+1) Download and run the docker container:
+```
+docker run -dit \
+    --name vis-kt \
+    -p 8080:80 \
+    --mount type=bind,source="$(pwd)"/IC3,target=/var/www/html/IC3 \
+    --mount type=bind,source="$(pwd)"/IC5,target=/var/www/html/IC5 \
+    ericmacedo/vis-kt:v1
+```
 
-> Linux:    ```vagrant up```
+2) To add a new user, just create a new folder with the username inside the ''/IC*/users/'' folder.
 
-> Windows: ```vagrant.exe up```
-
-2) Turn off:
-
-> Linux:    ```vagrant halt```
-
-> Windows: ```vagrant.exe halt```
-
-3) SSH into the virtual machine:
-
-> Linux:    ```vagrant ssh```
-
-> Windows: ```vagrant.exe ssh```
-
-4) To add a new user, just create a new folder with the username inside the ''/IC*/users/'' folder.
+---
+If you want to build the container image, run the following command:
+```
+docker build -t vis-kt .
+```
