@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  main:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - IC3:/var/www/html/IC3
+      - IC5:/var/www/html/IC5
+    ports:
+      - 80:80
+volumes:
+  IC3:
+  IC5:
